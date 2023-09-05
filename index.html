@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather web</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
     <div class="app-platform">
         <div class="summary">
-        <h1>Nairobi</h1>
+        <h1 id="location"></h1>
         <ul>
             <li>Tue 10:16</li>
-            <li>Clear sky</li>
+            <li id="description"></li>
         </ul> 
         </div>
         <div class="row">
             <div class="col-8">
             <div class="d-flex weather-temperature">
                 <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="clear sky">
-                <span class="number">12</span><span class="units">°C | <a href="#">F</a></span>
+                <span class="number" id="temperature"></span><span class="units">°C | <a href="#">F</a></span>
             </div>
             </div>
             <div class="col-4">
                 <ul>
-                    <li>Humidity : 0%</li>
-                    <li>Wind: 20km/hr </li>
+                    <li>Humidity: <span id="hvalue"></span>%</li>
+                    <li>Wind: <span id="wvalue"></span>km/hr</li>
                 </ul>
             </div>  
         </div>
