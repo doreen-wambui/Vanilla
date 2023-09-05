@@ -27,3 +27,13 @@ li {
     list-style: none;
     font-size: 16px;
 }
+.summary {
+    margin-bottom: 10px;
+}
+.number {
+    font-size: 64px;
+    line-height: 1;
+}
+.units {
+    line-height: 32px;
+}
