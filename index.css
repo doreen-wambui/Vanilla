@@ -9,6 +9,7 @@
     padding: 20px;
     border: 1px solid #677277;
     border-radius: 10px;
+    background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
 }
 .git-link {
     display: block;
@@ -27,8 +28,15 @@ li {
     list-style: none;
     font-size: 16px;
 }
+li:first-letter {
+    text-transform: capitalize;
+}
 .summary {
     margin-bottom: 10px;
+}
+#icon {
+    height: 64px;
+    width: 64px;
 }
 .number {
     font-size: 64px;
