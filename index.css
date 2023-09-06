@@ -33,6 +33,8 @@ li:first-letter {
 }
 .summary {
     margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 #icon {
     height: 64px;

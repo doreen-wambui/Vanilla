@@ -39,9 +39,27 @@ function showWeather(response){
     actualIcon.setAttribute  ("alt", response.data.condition.description);    
 }
 
-let apiKey= "abet7074937b235fc6624oada0e683be";
+function showCity(event) {
+    event.preventDefault();
+    let searchInput= document.querySelector("#search-input");
+    let city= document.querySelector ("#location");
+    city.innerHTML=`${searchInput.value}`;
+
+    let apiKey= "abet7074937b235fc6624oada0e683be";
+    let units = "metric";
+    let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(showWeather);
+
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener ("submit", showCity);
+
+/*let apiKey= "abet7074937b235fc6624oada0e683be";
 let city = "Nairobi";
 let units = "metric";
 let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(showWeather);
+axios.get(apiUrl).then(showWeather);*/
+
