@@ -14,7 +14,7 @@
         <div class="row" id="search-form">
             <div class="col-10">
                 <form>
-                    <input type="text" class="form-control" id= "search-input" placeholder="Type city">
+                    <input type="text" class="form-control" id= "search-input" placeholder="Type city" autocomplete="off">
                 </form>
             </div>
             <div class="col-2">
@@ -34,7 +34,7 @@
             <div class="col-8">
             <div class="d-flex weather-temperature">
                 <img  id="icon">
-                <span class="number" id="temperature"></span><span class="units">°C | <a href="#">F</a></span>
+                <span class="number" id="temperature"></span><span class="units"><a href="#" id="ctemp" class="active">°C</a> | <a href="#" id="ftemp">°F</a></span>
             </div>
             </div>
             <div class="col-4">

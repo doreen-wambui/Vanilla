@@ -29,7 +29,9 @@ function showWeather(response){
     let actualDate= document.querySelector("#date");
     let actualIcon= document.querySelector("#icon");
 
-    actualTemperature.innerHTML= Math.round(response.data.temperature.current);
+    celciusTemperature= response.data.temperature.current;
+
+    actualTemperature.innerHTML= Math.round(celciusTemperature);
     actualCity.innerHTML= response.data.city;
     actualDescription.innerHTML=response.data.condition.description;
     actualHValue.innerHTML= response.data.temperature.humidity;
@@ -44,6 +46,7 @@ function showCity(event) {
     let searchInput= document.querySelector("#search-input");
     let city= document.querySelector ("#location");
     city.innerHTML=`${searchInput.value}`;
+    
 
     let apiKey= "abet7074937b235fc6624oada0e683be";
     let units = "metric";
@@ -53,13 +56,32 @@ function showCity(event) {
 
 }
 
+function showFtemp(event){
+    event.preventDefault();
+    cLink.classList.remove("active");
+    fLink.classList.add("active");
+    let actualTemperature = document.querySelector("#temperature");
+    actualTemperature.innerHTML= Math.round((9/5 * celciusTemperature) + 32);
+
+}
+
+function showCtemp(event){
+    event.preventDefault();
+    fLink.classList.remove("active");
+    cLink.classList.add("active");
+    let actualTemperature = document.querySelector("#temperature");
+    actualTemperature.innerHTML= Math.round(celciusTemperature);
+
+}
+
+let celciusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener ("submit", showCity);
 
-/*let apiKey= "abet7074937b235fc6624oada0e683be";
-let city = "Nairobi";
-let units = "metric";
-let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+let fLink= document.querySelector("#ftemp");
+fLink.addEventListener("click", showFtemp);
 
-axios.get(apiUrl).then(showWeather);*/
+let cLink= document.querySelector("#ctemp");
+cLink.addEventListener("click", showCtemp);
 

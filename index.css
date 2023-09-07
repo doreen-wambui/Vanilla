@@ -9,7 +9,7 @@
     padding: 20px;
     border: 1px solid #677277;
     border-radius: 10px;
-    background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
 }
 .git-link {
     display: block;
@@ -47,3 +47,14 @@ li:first-letter {
 .units {
     line-height: 32px;
 }
+#ftemp, #ctemp {
+    text-decoration: none;
+    cursor: default;
+}
+
+.units .active {
+    color: #677277;
+    text-decoration: none;
+}
+
+
