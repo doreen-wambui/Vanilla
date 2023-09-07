@@ -41,18 +41,18 @@ function showWeather(response){
     actualIcon.setAttribute  ("alt", response.data.condition.description);    
 }
 
+function search(city) {
+    let apiKey= "abet7074937b235fc6624oada0e683be";
+    let units = "metric";
+    let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(showWeather);
+}
+
 function showCity(event) {
     event.preventDefault();
     let searchInput= document.querySelector("#search-input");
-    let city= document.querySelector ("#location");
-    city.innerHTML=`${searchInput.value}`;
-    
-
-    let apiKey= "abet7074937b235fc6624oada0e683be";
-    let units = "metric";
-    let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(showWeather);
+    search(searchInput.value);
 
 }
 
@@ -85,3 +85,4 @@ fLink.addEventListener("click", showFtemp);
 let cLink= document.querySelector("#ctemp");
 cLink.addEventListener("click", showCtemp);
 
+search("Thika");
