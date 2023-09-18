@@ -10,6 +10,7 @@
     border: 1px solid #677277;
     border-radius: 10px;
     background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+    
 }
 .git-link {
     display: block;
@@ -56,5 +57,9 @@ li:first-letter {
     color: #677277;
     text-decoration: none;
 }
-
+.forecast {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
 
