@@ -74,6 +74,28 @@ function showCtemp(event){
 
 }
 
+
+function showForecast() {
+    let actualForecast= document.querySelector("#forecast-weather");
+    let forecastHTML= `<div class="row">`;
+    let days= ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
+
+    days.forEach (function(day){
+        forecastHTML= forecastHTML + `
+    <div class="col-2">
+    <div class="dayOfTheWeek">${day}</div>
+    <div><img  id="forecast-icon"></div>
+    <div class="temp-range"><span class="max">24°C</span> | <span class="min">14°C</span></div>
+    </div>`;
+    });
+
+    forecastHTML= forecastHTML + ` </div>`;
+
+    actualForecast.innerHTML= forecastHTML;
+}
+
+showForecast();
+
 let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
