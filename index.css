@@ -1,5 +1,5 @@
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     margin-top: 20px;
     font-weight: 500;
@@ -9,7 +9,7 @@
     padding: 20px;
     border: 1px solid #677277;
     border-radius: 10px;
-    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+    background: #F2F7FB;
     
 }
 .git-link {
@@ -40,6 +40,7 @@ li:first-letter {
 #icon {
     height: 64px;
     width: 64px;
+    font-size: 32px;
 }
 .number {
     font-size: 64px;
@@ -60,6 +61,11 @@ li:first-letter {
 .forecast {
     margin-top: 20px;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+}
+#forecast-icon {
+    height: 64px;
+    width: 64px;
+    font-size: 32px;
 }
 
