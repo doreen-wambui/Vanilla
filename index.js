@@ -20,6 +20,14 @@ return `${day} ${date} ${month}, ${hour}:${minutes}`;
 
 }
 
+function showCoordinates(response){
+    let lat = response.latitude;
+    let lon = response. longitude;
+    let apiKey="abet7074937b235fc6624oada0e683be";
+    let apiUrl= `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}`;
+    console.log(apiUrl);
+}
+
 function showWeather(response){
     let actualTemperature = document.querySelector("#temperature");
     let actualCity = document.querySelector("#location");
@@ -38,7 +46,10 @@ function showWeather(response){
     actualWValue.innerHTML= response.data.wind.speed;
     actualDate.innerHTML= showDate(response.data.time*1000);
     actualIcon.setAttribute  ("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
-    actualIcon.setAttribute  ("alt", response.data.condition.description);    
+    actualIcon.setAttribute  ("alt", response.data.condition.description);  
+    
+    showCoordinates(response.data.coordinates)
+
 }
 
 function search(city) {
